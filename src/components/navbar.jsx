@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaChevronDown, FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/logo.png";
-import "./Navbar.css";
+import "./navbar.css";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);

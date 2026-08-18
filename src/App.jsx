@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { FaWhatsapp, FaInstagram, FaArrowRight, FaMapMarkerAlt } from "react-icons/fa";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar.jsx";
 import "./App.css";
 
 const WHATSAPP_NUMBER = ""; 

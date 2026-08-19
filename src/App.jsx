@@ -3,7 +3,7 @@ import { FaWhatsapp, FaInstagram, FaArrowRight, FaMapMarkerAlt } from "react-ico
 import Navbar from "./components/Navbar.jsx";
 import "./App.css";
 
-const WHATSAPP_NUMBER = "9209079807"; 
+const WHATSAPP_NUMBER = "919209079807";
 const INSTAGRAM_URL = "";
 
 function openWhatsApp(message = "Hello Gajalakshmi Real Estate, I am interested in your properties.") {

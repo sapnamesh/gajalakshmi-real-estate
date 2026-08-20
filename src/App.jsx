@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { FaWhatsapp, FaInstagram, FaArrowRight, FaMapMarkerAlt } from "react-icons/fa";
 import Navbar from "./components/Navbar.jsx";
+import Flats from "./pages/Flat.jsx";
+import Plots from "./pages/plot.jsx";
 import "./App.css";
 
 const WHATSAPP_NUMBER = "919209079807";
@@ -395,6 +397,14 @@ function Home() {
             Could Be One Message Away.
           </h2>
 
+          <a className="contact-email" href="mailto:Gajalakshmirealestate@gmail.com">
+            Gajalakshmirealestate@gmail.com
+          </a>
+
+          <a className="contact-email contact-phone" href="tel:+917823090711">
+            +91 78230 90711
+          </a>
+
         </div>
 
         <button
@@ -563,26 +573,6 @@ ${message || "No message"}
 }
 
 
-function Flats() {
-  return (
-    <div className="simple-page">
-      <h1>Flats</h1>
-      <p>Our available flats will appear here.</p>
-    </div>
-  );
-}
-
-
-function Plots() {
-  return (
-    <div className="simple-page">
-      <h1>Plots</h1>
-      <p>Our available plots will appear here.</p>
-    </div>
-  );
-}
-
-
 function LegalDocuments() {
   return (
     <div className="simple-page">
@@ -597,6 +587,14 @@ function Contact() {
   return (
     <div className="simple-page">
       <h1>Contact Gajalakshmi Real Estate</h1>
+
+      <a className="contact-email" href="mailto:Gajalakshmirealestate@gmail.com">
+        Gajalakshmirealestate@gmail.com
+      </a>
+
+      <a className="contact-email contact-phone" href="tel:+917823090711">
+        +91 78230 90711
+      </a>
 
       <button
         className="gold-button"

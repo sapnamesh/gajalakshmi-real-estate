@@ -78,7 +78,7 @@
 
 .dropdown-menu {
   position: absolute;
-  top: 38px;
+  top: 100%;
   left: 0;
 
   min-width: 170px;

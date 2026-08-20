@@ -949,6 +949,22 @@ textarea {
   font-weight: 500;
 }
 
+.contact-email {
+  display: inline-block;
+
+  margin-top: 18px;
+
+  color: #d5ad4d;
+
+  font-size: 16px;
+
+  text-decoration: none;
+}
+
+.contact-email:hover {
+  text-decoration: underline;
+}
+
 .contact-section button {
   padding: 17px 28px;
 
@@ -1050,6 +1066,10 @@ textarea {
 
 .simple-page p {
   color: #aaa;
+}
+
+.simple-page .contact-email {
+  margin: 10px 0 24px;
 }
 
 /* =========================
@@ -1220,4 +1240,544 @@ textarea {
 
     bottom: 15px;
   }
+}
+
+
+
+
+
+/* =========================================================
+   PROPERTY LISTING PAGES
+   Flats + Plots
+========================================================= */
+
+.properties-page {
+  min-height: 100vh;
+  background: #f7f5f0;
+  color: #171717;
+  padding-bottom: 80px;
+}
+
+/* PAGE HEADER */
+
+.properties-header {
+  padding: 150px 8% 80px;
+  text-align: center;
+  background: #111;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.properties-header::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border: 1px solid rgba(197, 164, 88, 0.25);
+  border-radius: 50%;
+  top: -170px;
+  left: -100px;
+}
+
+.properties-header::after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border: 1px solid rgba(197, 164, 88, 0.18);
+  border-radius: 50%;
+  right: -180px;
+  bottom: -280px;
+}
+
+.properties-header p {
+  color: #c5a458;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  margin-bottom: 18px;
+}
+
+.properties-header h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(42px, 6vw, 72px);
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+
+.properties-header span {
+  display: block;
+  max-width: 650px;
+  margin: 22px auto 0;
+  color: #cfcfcf;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+
+/* PROPERTY LIST */
+
+.property-list-section {
+  width: min(1200px, 90%);
+  margin: 70px auto 0;
+}
+
+.property-list-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+
+/* SCHEME CARD */
+
+.scheme-card {
+  background: #fff;
+  border: 1px solid #e6e1d7;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scheme-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.1);
+}
+
+
+/* IMAGE */
+
+.scheme-image {
+  height: 240px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.scheme-image span:last-child {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+.flat-image {
+  background:
+    linear-gradient(
+      135deg,
+      #252525,
+      #111
+    );
+}
+
+.plot-image {
+  background:
+    linear-gradient(
+      135deg,
+      #3a3324,
+      #171717
+    );
+}
+
+.scheme-image::before {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border: 1px solid rgba(197, 164, 88, 0.45);
+  transform: rotate(45deg);
+}
+
+.scheme-image::after {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border: 1px solid rgba(197, 164, 88, 0.25);
+  transform: rotate(45deg);
+}
+
+.scheme-image > span:last-child {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* RESALE BADGE */
+
+.resale-badge {
+  position: absolute !important;
+  top: 18px;
+  right: 18px;
+  z-index: 5;
+  background: #c5a458;
+  color: #111 !important;
+  padding: 7px 12px;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.5px !important;
+}
+
+
+/* CARD CONTENT */
+
+.scheme-content {
+  padding: 28px;
+}
+
+.scheme-type {
+  margin: 0 0 10px;
+  color: #a48642;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.scheme-content h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: #181818;
+}
+
+.scheme-location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 14px 0 20px;
+  color: #777;
+  font-size: 13px;
+}
+
+.scheme-location svg {
+  color: #c5a458;
+}
+
+
+/* SHORT DETAILS */
+
+.scheme-short-details {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 16px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.scheme-short-details span {
+  padding-right: 12px;
+  color: #555;
+  font-size: 12px;
+}
+
+.scheme-short-details span + span {
+  border-left: 1px solid #ddd;
+  padding-left: 12px;
+}
+
+
+/* DETAILS BUTTON */
+
+.details-button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid #c5a458;
+  background: transparent;
+  color: #171717;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.details-button:hover {
+  background: #111;
+  color: #c5a458;
+}
+
+
+/* =========================================================
+   PROPERTY DETAILS MODAL
+========================================================= */
+
+.property-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.78);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.property-modal {
+  width: min(950px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #fff;
+  position: relative;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+  animation: propertyModalIn 0.3s ease;
+}
+
+@keyframes propertyModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* CLOSE */
+
+.modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 10;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.modal-close:hover {
+  background: #c5a458;
+  color: #111;
+}
+
+
+/* MODAL IMAGE */
+
+.modal-property-image {
+  height: 300px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-property-image > span:last-child {
+  position: relative;
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 6px;
+}
+
+
+/* MODAL CONTENT */
+
+.modal-property-content {
+  padding: 40px;
+}
+
+.modal-property-content h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 400;
+  color: #171717;
+}
+
+
+/* DETAILS GRID */
+
+.property-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 30px;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.property-detail-grid div {
+  padding: 20px;
+  border-right: 1px solid #e5e5e5;
+}
+
+.property-detail-grid div:last-child {
+  border-right: none;
+}
+
+.property-detail-grid span {
+  display: block;
+  margin-bottom: 7px;
+  color: #999;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.property-detail-grid strong {
+  color: #222;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* DESCRIPTION */
+
+.property-description {
+  padding: 30px 0;
+}
+
+.property-description h3 {
+  margin: 0 0 12px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.property-description p {
+  margin: 0;
+  color: #666;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+
+/* WHATSAPP BUTTON */
+
+.modal-whatsapp-button {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  background: #111;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.modal-whatsapp-button svg {
+  font-size: 18px;
+}
+
+.modal-whatsapp-button:hover {
+  background: #c5a458;
+  color: #111;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .property-list-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .property-detail-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .property-detail-grid div:nth-child(2) {
+    border-right: none;
+  }
+
+  .property-detail-grid div:nth-child(-n + 2) {
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .properties-header {
+    padding: 120px 6% 60px;
+  }
+
+  .properties-header h1 {
+    font-size: 42px;
+  }
+
+  .properties-header span {
+    font-size: 14px;
+  }
+
+  .property-list-section {
+    width: 92%;
+    margin-top: 45px;
+  }
+
+  .property-list-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .scheme-image {
+    height: 210px;
+  }
+
+  .scheme-content {
+    padding: 22px;
+  }
+
+  .scheme-content h2 {
+    font-size: 25px;
+  }
+
+  .property-modal-overlay {
+    padding: 12px;
+    align-items: flex-start;
+  }
+
+  .property-modal {
+    max-height: 94vh;
+    margin-top: 15px;
+  }
+
+  .modal-property-image {
+    height: 220px;
+  }
+
+  .modal-property-content {
+    padding: 28px 22px;
+  }
+
+  .property-detail-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .property-detail-grid div {
+    padding: 15px;
+  }
+
 }
